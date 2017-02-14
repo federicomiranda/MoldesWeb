@@ -1,5 +1,24 @@
+@font-face {
+    font-family: 'intro_condblack';
+    src: url('../fonts/intro_cond_black_free-webfont.woff2') format('woff2'),
+         url('../fonts/intro_cond_black_free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'intro_condlight';
+    src: url('../fonts/intro_cond_light_free-webfont.woff2') format('woff2'),
+         url('../fonts/intro_cond_light_free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
 	box-sizing: border-box;
 }
 
 @import '_header.scss';
+@import '_nosotros.scss';
