@@ -20,7 +20,7 @@
 		<nav>
 			<ul class="menu">
 				<li><a href="index.html">Inicio</a></li><!--
-				--><li><a href="#">Nosotros</a></li><!--
+				--><li><a href="#" id="nos">Nosotros</a></li><!--
 				--><li><a href="#">Las cervezas</a></li><!--
 				--><li class="logo"><a href="index.html"></a></li><!--
 				--><li><a href="#">Puntos de venta</a></li><!--
@@ -39,7 +39,7 @@
 		</article>
 	</header>
 
-	<section class="nosotros">
+	<section id="nosotros" class="nosotros">
 		<div class="nosotros-desc">
 			<h2>Moldes</h2>
 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
@@ -70,5 +70,14 @@
 			</ul>
 		</div>
 	</section>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	    $(function(){
+	      $("#nos").on("click", function(){
+	        $("html, body").animate({scrollTop: $("#nosotros").offset().top}, 500);
+	      })
+	    })
+	</script>
 </body>
 </html>
