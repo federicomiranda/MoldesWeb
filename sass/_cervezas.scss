@@ -1,0 +1,93 @@
+.cervezas {
+	background: #FFF;
+	position: relative;
+
+	.cervezas-desc {
+		width: 37%;
+		padding: 70px 60px;
+		display: inline-block;
+		background: #F0F0F0;
+
+		h2 {
+			font-family: 'intro_condblack';
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 59px;
+			position: relative;
+			margin-bottom: 60px;
+		}
+
+		h2::after {
+			content: 'Cervezas';
+			font-family: 'Pacifico';
+			color: #FDC218;
+			font-size: 45px;
+			font-weight: normal;
+			letter-spacing: 2px;
+			position: absolute;
+			text-transform: capitalize;
+			left: 110px;
+			top: 38px;
+		}
+
+		p {
+			font-family: 'Calibri';
+			font-size: 19px;
+			line-height: 30px;
+		}
+	}
+
+	.cervezas-slider {
+		padding: 0 60px;
+		width: 63%;
+		display: inline-block;
+
+		.fotorama {
+			width: 60%;
+			margin: auto;
+
+			.fotorama__stage .fotorama__pointer {
+				margin-top: 10px;
+			}
+
+			.fotorama__dot {
+			    display: block;
+			    width: 6px;
+			    height: 6px;
+			    top: 0px;
+			    background: #7f7f7f;
+			}
+
+			.fotorama__nav__frame.fotorama__active .fotorama__dot {
+				width: 8px;
+				height: 8px;
+				background: #FDC217;
+				border: 1px solid #FDC217;
+			}
+
+			.articulo-botella {
+				margin: 20px 0;
+
+				article.texto {
+					width: 50%;
+					margin-left: 50px;
+					display: inline-block;
+					vertical-align: top;
+					margin-top: 100px;
+
+					h3 {
+						font-family: 'intro_condblack';
+						font-size: 30px;
+					}
+
+					p {
+						font-family: 'Calibri';
+						font-size: 18px;
+						margin-top: 30px; 
+						line-height: 25px;
+					}
+				}
+			}
+		}
+	}
+}
