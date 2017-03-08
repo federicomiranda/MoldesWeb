@@ -38,54 +38,104 @@
 	}
 
 	.cervezas-slider {
-		padding: 0 60px;
+		padding-left: 50px;
 		width: 63%;
 		display: inline-block;
 
-		.fotorama {
-			width: 60%;
+		.slick-prev,
+		.slick-next {
+			border: none;
+			vertical-align: top;
+			margin: 150px 0 0 0;
+			color: transparent;
+			background: transparent;
+			font-family: 'Calibri';
+			font-weight: normal;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.slick-prev:before {
+			content: "";
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			background: url(../images/back.png)
+		}
+
+		.slick-next:after {
+			content: "";
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			background: url(../images/next.png)
+		}
+
+		.slick-list {
+		    width: 60%;
 			margin: auto;
+			display: inline-block;
+		}
 
-			.fotorama__stage .fotorama__pointer {
-				margin-top: 10px;
+		article.slick-slide {
+			img {
+				display: inline-block;
 			}
 
-			.fotorama__dot {
-			    display: block;
-			    width: 6px;
-			    height: 6px;
-			    top: 0px;
-			    background: #7f7f7f;
+			.texto {
+				display: inline-block;
+				width: 70%;
+				vertical-align: top;
+				margin-top: 100px;
+				margin-left: 50px;
+
+				h3 {
+					font-family: 'intro_condblack';
+					font-size: 30px;
+					margin-bottom: 20px;
+				}
+
+				p {
+					font-family: 'Calibri';
+					font-size: 18px;
+					line-height: 25px;
+				}
 			}
+		}
 
-			.fotorama__nav__frame.fotorama__active .fotorama__dot {
-				width: 8px;
-				height: 8px;
-				background: #FDC217;
-				border: 1px solid #FDC217;
-			}
+		.slick-dots {
+			text-align: center;
 
-			.articulo-botella {
-				margin: 20px 0;
+			li {
+				display: inline-block;
+				margin: 0 5px;
 
-				article.texto {
-					width: 50%;
-					margin-left: 50px;
-					display: inline-block;
-					vertical-align: top;
-					margin-top: 100px;
+				button {
+					border: none;
+					font-size: 0;
+					background: transparent;
 
-					h3 {
-						font-family: 'intro_condblack';
-						font-size: 30px;
+					&:before {
+						content: "";
+						display: inline-block;
+						width: 10px;
+						height: 10px;
+						background: #D1D1D1;
+						border-radius: 50%;
 					}
 
-					p {
-						font-family: 'Calibri';
-						font-size: 18px;
-						margin-top: 30px; 
-						line-height: 25px;
+					&:focus {
+						outline: none;
 					}
+				}
+			}
+
+			.slick-active {
+
+				button:before {
+					background: #FDC218;
 				}
 			}
 		}

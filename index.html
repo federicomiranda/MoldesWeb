@@ -7,7 +7,6 @@
 
 	<!-- Estilos -->
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fotorama.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Tipografías -->
@@ -78,53 +77,60 @@
 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 		</div><!-- 
 		--><div class="cervezas-slider">
-			<div class="fotorama" data-autoplay="2000" data-swipe="false" data-loop="true" data-height="320px">
-				<article class="articulo-botella">
+				<article>
 					<img src="images/bottle.png">
-					
-					<article class="texto">	
+					<div class="texto">
 						<h3>Botella 1</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-					</article>
+					</div>
 				</article>
-				<article class="articulo-botella">
+
+				<article>
 					<img src="images/bottle.png">
-					
-					<article class="texto">	
+					<div class="texto">
 						<h3>Botella 2</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-					</article>
+					</div>
 				</article>
-				<article class="articulo-botella">
+
+				<article>
 					<img src="images/bottle.png">
-					
-					<article class="texto">	
+					<div class="texto">
 						<h3>Botella 3</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-					</article>
+					</div>
 				</article>
-				<article class="articulo-botella">
+
+				<article>
 					<img src="images/bottle.png">
-					
-					<article class="texto">	
+					<div class="texto">
 						<h3>Botella 4</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-					</article>
+					</div>
 				</article>
-			</div>	
 		</div>
 	</section>
 
 
 
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="js/fotorama.js"></script>
-	<script type="text/javascript">
+	<script src="js/slick.min.js"></script>
+	<script>
 	    $(function(){
 	      $("#nos").on("click", function(){
 	        $("html, body").animate({scrollTop: $("#nosotros").offset().top}, 500);
 	      })
-	    })
+	    })			
+	</script>
+	<script>
+		$(document).on('ready', function(){
+			$('.cervezas-slider').slick({
+				autoplay : true,
+				autoplaySpeed: 2000,
+				mobileFirst: true, 
+				dots: true
+			});
+		});
 	</script>
 </body>
 </html>

@@ -177,6 +177,79 @@ header {
       border-left: 1px solid #1C1912;
       border-top: 1px solid #1C1912; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 .cervezas {
   background: #FFF;
   position: relative; }
@@ -208,40 +281,72 @@ header {
       font-size: 19px;
       line-height: 30px; }
   .cervezas .cervezas-slider {
-    padding: 0 60px;
+    padding-left: 50px;
     width: 63%;
     display: inline-block; }
-    .cervezas .cervezas-slider .fotorama {
+    .cervezas .cervezas-slider .slick-prev,
+    .cervezas .cervezas-slider .slick-next {
+      border: none;
+      vertical-align: top;
+      margin: 150px 0 0 0;
+      color: transparent;
+      background: transparent;
+      font-family: 'Calibri';
+      font-weight: normal; }
+      .cervezas .cervezas-slider .slick-prev:focus,
+      .cervezas .cervezas-slider .slick-next:focus {
+        outline: none; }
+    .cervezas .cervezas-slider .slick-prev:before {
+      content: "";
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: url(../images/back.png); }
+    .cervezas .cervezas-slider .slick-next:after {
+      content: "";
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: url(../images/next.png); }
+    .cervezas .cervezas-slider .slick-list {
       width: 60%;
-      margin: auto; }
-      .cervezas .cervezas-slider .fotorama .fotorama__stage .fotorama__pointer {
-        margin-top: 10px; }
-      .cervezas .cervezas-slider .fotorama .fotorama__dot {
-        display: block;
-        width: 6px;
-        height: 6px;
-        top: 0px;
-        background: #7f7f7f; }
-      .cervezas .cervezas-slider .fotorama .fotorama__nav__frame.fotorama__active .fotorama__dot {
-        width: 8px;
-        height: 8px;
-        background: #FDC217;
-        border: 1px solid #FDC217; }
-      .cervezas .cervezas-slider .fotorama .articulo-botella {
-        margin: 20px 0; }
-        .cervezas .cervezas-slider .fotorama .articulo-botella article.texto {
-          width: 50%;
-          margin-left: 50px;
-          display: inline-block;
-          vertical-align: top;
-          margin-top: 100px; }
-          .cervezas .cervezas-slider .fotorama .articulo-botella article.texto h3 {
-            font-family: 'intro_condblack';
-            font-size: 30px; }
-          .cervezas .cervezas-slider .fotorama .articulo-botella article.texto p {
-            font-family: 'Calibri';
-            font-size: 18px;
-            margin-top: 30px;
-            line-height: 25px; }
+      margin: auto;
+      display: inline-block; }
+    .cervezas .cervezas-slider article.slick-slide img {
+      display: inline-block; }
+    .cervezas .cervezas-slider article.slick-slide .texto {
+      display: inline-block;
+      width: 70%;
+      vertical-align: top;
+      margin-top: 100px;
+      margin-left: 50px; }
+      .cervezas .cervezas-slider article.slick-slide .texto h3 {
+        font-family: 'intro_condblack';
+        font-size: 30px;
+        margin-bottom: 20px; }
+      .cervezas .cervezas-slider article.slick-slide .texto p {
+        font-family: 'Calibri';
+        font-size: 18px;
+        line-height: 25px; }
+    .cervezas .cervezas-slider .slick-dots {
+      text-align: center; }
+      .cervezas .cervezas-slider .slick-dots li {
+        display: inline-block;
+        margin: 0 5px; }
+        .cervezas .cervezas-slider .slick-dots li button {
+          border: none;
+          font-size: 0;
+          background: transparent; }
+          .cervezas .cervezas-slider .slick-dots li button:before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #D1D1D1;
+            border-radius: 50%; }
+          .cervezas .cervezas-slider .slick-dots li button:focus {
+            outline: none; }
+      .cervezas .cervezas-slider .slick-dots .slick-active button:before {
+        background: #FDC218; }
 
 /*# sourceMappingURL=style.css.map */
