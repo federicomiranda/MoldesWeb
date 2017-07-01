@@ -1,0 +1,108 @@
+.contacto {
+	background: #111111;
+
+	.contacto-desc {
+		width: 37%;
+		padding: 70px 60px;
+		display: inline-block;
+
+		h2 {
+			font-family: $titulos;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 59px;
+			position: relative;
+			color: #FFFFFF;
+		}
+
+		p {
+			font-family: $texto;
+			font-size: 21px;
+			color: $color-principal;
+			margin: 10px 0 20px 0;
+		}
+
+		ul {
+			font-family: $texto;
+
+			li {
+				color: #8e8e8e;
+				font-size: 19px;
+				margin-bottom: 10px;
+
+				span {
+					margin-right: 5px;
+				}
+
+				a {
+					text-decoration: none;
+					color: #8e8e8e;
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+
+	.contacto-form {
+		width: 63%;
+		display: inline-block;
+		vertical-align: top;
+		background: url(../images/contacto1.jpg);
+		background-size: cover;
+		padding: 60px 60px 20px 60px;;
+
+		p {
+			font-family: $texto;
+			font-size: 21px;
+			color: $color-principal;
+			margin: 10px 0 20px 0;
+			width: 80%;
+			margin: 80px auto 0 auto;
+		}
+
+		form {
+			width: 80%;
+			margin: auto;
+
+			input, textarea {
+				display: block;
+				width: 100%;
+				margin: 20px 0;
+				padding: 10px;
+				background: transparent;
+				border: none;
+				font-family: $texto;
+				font-size: 19px;
+				border-bottom: 1px solid #8e8e8e;
+				resize: none;
+				outline: none;
+				color: #8e8e8e;
+			}
+
+			input[type="submit"] {
+				background: $color-principal;
+				color: #111111;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 20px;
+				border: none;
+				transition: 0.5s;
+				cursor: pointer;
+				margin-top: 30px;
+			}
+
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: #8e8e8e;
+			}
+			::-moz-placeholder { /* Firefox 19+ */
+			  color: #8e8e8e;
+			}
+			:-ms-input-placeholder { /* IE 10+ */
+			  color: #8e8e8e;
+			}
+			:-moz-placeholder { /* Firefox 18- */
+			  color: #8e8e8e;
+			}
+		}
+	}
+}

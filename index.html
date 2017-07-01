@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Moldes Craft Beer</title>
+	<title>MOLDES Craft Beer</title>
 
 	<!-- Estilos -->
 	<link rel="stylesheet" href="css/reset.css">
@@ -13,59 +13,89 @@
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
 	<!-- Iconos -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body>
-	<header>
+	<script>
+		/* CONTROL DE EDAD */
+		var body = document.getElementsByTagName('body')[0];
+		var fondo = document.createElement('div');
+			fondo.className = 'fondo';
+		body.appendChild(fondo);
+
+		var modal = document.createElement('div');
+			modal.className = 'modal';
+		fondo.appendChild(modal);
+
+		var pregunta = document.createElement('p');
+			pregunta.innerHTML = '¿Sos mayor de 18 años?';
+			pregunta.className = 'pregunta';
+		modal.appendChild(pregunta);
+
+		var btnSi = document.createElement('button');
+			btnSi.innerHTML = 'Soy mayor';
+			btnSi.className = 'btnSi';
+		modal.appendChild(btnSi);
+
+		var btnNo = document.createElement('button');
+			btnNo.innerHTML = 'Soy menor';
+			btnNo.className = 'btnNo';
+		modal.appendChild(btnNo);
+	</script>
+	<header id="inicio">
 		<nav>
+			<h1 class="logo"><a href="index.html"></a></h1>
 			<ul class="menu">
-				<li><a href="index.html">Inicio</a></li><!--
-				--><li><a href="#" id="nos">Nosotros</a></li><!--
-				--><li><a href="#">Las cervezas</a></li><!--
-				--><li class="logo"><a href="index.html"></a></li><!--
-				--><li><a href="#">Puntos de venta</a></li><!--
-				--><li><a href="#">Contacto</a>
+				<li><a id="in">Inicio</a></li><!--
+				--><li><a id="nos">Nosotros</a></li><!--
+				--><li><a id="cer">Estilos</a></li><!--
+				--><li><a id="co">Contacto</a>
 						<ul class="redes">
-							<li><a href="https://www.facebook.com/cervezamoldes"><span class="ion-social-facebook"></span></a></li>
-							<li><a href="https://www.instagram.com/cervezamoldes"><span class="ion-social-instagram-outline"></span></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/cervezamoldes"><span class="fa fa-facebook"></span></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/cervezamoldes"><span class="fa fa-instagram"></span></a></li>
 						</ul>
 				</li>
 			</ul>
 		</nav>
-		
+
 		<article>
-			<h2>Dolor sit Amet</h2>
-			<p>Loren ipsum</p>
+			<h2>Cerveza Moldes</h2>
+		<!-- Se va el slogan
+			<h2>The Best Beer</h2>
+			<p>In town</p>
+		-->
 		</article>
 	</header>
 
 	<section id="nosotros" class="nosotros">
 		<div class="nosotros-desc">
 			<h2>Moldes</h2>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-			<a href="#">Ver cervezas</a>
+			<p id="parrafo">Somos un equipo enfocado en la superación, la mejoría de algo que por sí sólo ya es excelente.
+			Es por esto que día a día trabajamos para reinventar la cerveza artesanal.</p>
+			<a id="ver">Ver cervezas</a> <!-- Cambiar el mouse en hover -->
 		</div><!--
 		--><div class="nosotros-destacado">
 			<ul>
 				<li class="br">
-					<span class="ion-beer"></span>
+					<span class="fa fa-arrow-up"></span>
 					<h3>Ingredientes de calidad</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna.</p>
+					<p>Utilizamos materia prima de producción nacional: cebada malteada proveniente de la región pampeana y lúpulo sembrado en terreno patagónico, específicamente en El Bolsón.</p>
 				</li><!--
 				--><li>
-					<span class="ion-beer"></span>
-					<h3>Producción lorem ipsum</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna.</p>
+					<span class="fa fa-gears"></span>
+					<h3>Estándares de producción</h3>
+					<p>Gracias a nuestras instalaciones, podemos llevar a cabo procesos previamente establecidos, generando un producto de calidad.</p>
 				</li><!--
 				--><li>
-					<span class="ion-beer"></span>
-					<h3>Cerveza tirada</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna.</p>
+					<span class="fa fa-beer"></span>
+					<h3>Revolución cervecera</h3>
+					<p>Innovación, curiosidad, independencia y colaboración para seguir adelante con este movimiento junto a nuestros colegas.</p>
 				</li><!--
 				--><li class="bl">
-					<span class="ion-beer"></span>
-					<h3>Alguna otra cosa</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna.</p>
+					<span class="fa fa-users"></span>
+					<h3>Comunidad</h3>
+					<p>Nos sentimos realizados cuando nos enteramos que una cerveza Moldes fue parte de un buen momento entre amigos y gente querida.</p>
 				</li>
 			</ul>
 		</div>
@@ -73,64 +103,95 @@
 
 	<section id="cervezas" class="cervezas">
 		<div class="cervezas-desc">
-			<h2 class="h2Cerve">Nuestras</h2>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-		</div><!-- 
+			<h2>Nuestras</h2>
+			<p>Mientras trabajamos en el desarrollo de estilos nuevos, nos apropiamos a nuestro modo de las siguientes clases:</p>
+		</div><!--
 		--><div class="cervezas-slider">
 				<article>
-					<img src="images/bottle.png">
+					<img src="images/golden.png">
 					<div class="texto">
-						<h3>Botella 1</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+						<h3>Golden</h3>
+						<p>Cerveza rubia, ligera y de carácter maltoso dulce, con poca presencia de lúpulo.</p>
+						<ul>
+							<li>Alc: 5%</li>
+							<li>Amargor: 2,5/5</li>
+						</ul>
 					</div>
 				</article>
 
 				<article>
-					<img src="images/bottle.png">
+					<img src="images/IPA.png">
 					<div class="texto">
-						<h3>Botella 2</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+						<h3>IPA</h3>
+						<p>Cerveza de amargor importante y tono dulce. Intensa, aromática y de buen cuerpo.</p>
+						<ul>
+							<li>Alc: 6%</li>
+							<li>Amargor: 4/5</li>
+						</ul>
 					</div>
 				</article>
 
 				<article>
-					<img src="images/bottle.png">
+					<img src="images/STOUT.png">
 					<div class="texto">
-						<h3>Botella 3</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+						<h3>Stout</h3>
+						<p>Cerveza negra de cremoso amargor elaborada con malta de cebada tostada.</p>
+						<ul>
+							<li>Alc: 4,5%</li>
+							<li>Amargor: 2,5/5</li>
+						</ul>
 					</div>
 				</article>
-
+			<!--
+				No hay foto
 				<article>
 					<img src="images/bottle.png">
 					<div class="texto">
-						<h3>Botella 4</h3>
+						<h3>APA</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+						<ul>
+							<li>Alc: 5%</li>
+							<li>Amargor: 3/5</li>
+						</ul>
 					</div>
 				</article>
+			-->
 		</div>
 	</section>
 
+	<section id="contacto" class="contacto">
+		<div class="contacto-desc">
+			<h2>Contacto</h2>
+			<p>Para comunicarte con nosotros, envianos un email a:</p>
 
+			<ul id="lista-contacto">
+				<li><span class="ion-email"></span> <a href="mailto:info@cervezamodes.com.ar">info@cervezamoldes.com.ar</a></li>
+				<li><span class="ion-email"></span> <a href="mailto:ventas@cervezamodes.com.ar">ventas@cervezamoldes.com.ar</a></li>
+			</ul>
+		</div><!--
+
+		--><div class="contacto-form">
+			<p>	O un mensaje a través del siguiente formulario:</p>
+			<form action="php/procesar.php" method="POST" id="formulario">
+				<input type="text" name="nombre" placeholder="Nombre y apellido" required pattern="[a-zA-ZÁÉÍÓÚáéíóú]{3,15} ?([a-zA-ZÁÉÍÓÚáéíóú]{3,15})*" data-msj="Por favor ingrese su nombre y apellido">
+				<input type="text" name="email" placeholder="Email" required pattern="[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})" data-msj="Por favor ingrese un email válido. Ej: info@cervezamoldes.com.ar">
+				<textarea cols="10" rows="3" name="mensaje" placeholder="Mensaje" minlength="10" required></textarea>
+				<input type="submit" value="Enviar">
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<p>Moldes 2017. Todos los derechos reservados.</p>
+
+		<ul class="redes-footer">
+			<li><a target="_blank" href="https://www.facebook.com/cervezamoldes"><span class="fa fa-facebook"></span></a></li>
+			<li><a target="_blank" href="https://www.instagram.com/cervezamoldes"><span class="fa fa-instagram"></span></a></li>
+		</ul>
+	</footer>
 
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script>
-	    $(function(){
-	      $("#nos").on("click", function(){
-	        $("html, body").animate({scrollTop: $("#nosotros").offset().top}, 500);
-	      })
-	    })			
-	</script>
-	<script>
-		$(document).on('ready', function(){
-			$('.cervezas-slider').slick({
-				autoplay : true,
-				autoplaySpeed: 2000,
-				mobileFirst: true, 
-				dots: true
-			});
-		});
-	</script>
+	<script src="js/main.js"></script>
 </body>
 </html>

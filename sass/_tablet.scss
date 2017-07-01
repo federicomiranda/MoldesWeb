@@ -1,0 +1,153 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	/* HEADER */
+	header {
+		
+
+		article {
+			width: 355px;
+			left: calc(50% - 177px);
+
+			h2 {
+				font-size: 55px;
+			}
+
+			p {
+				font-size: 45px;
+			}
+		}
+	}
+
+	/* CERVEZAS */
+	.cervezas {
+		.cervezas-desc {
+			width: 100%;
+
+			p {
+				font-size: 22px;
+				line-height: 35px;
+			}
+		}
+
+		.cervezas-slider {
+			width: 100%;
+			padding: 30px 0;
+
+			.slick-prev,
+			.slick-next {
+				border: none;
+				vertical-align: top;
+				margin: 150px 0 0 0;
+				color: transparent;
+				background: transparent;
+				font-family: 'Calibri';
+				font-weight: normal;
+				width: 80px;
+			}
+
+			.slick-prev {
+				margin-right: 20px;
+			}
+
+			.slick-list {
+				width: 65%;
+				margin-left: 10px;
+			}
+
+			article.slick-slide {
+				.texto {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		.slick-initialized.slick-slider.slick-dotted {
+			width: 80%;
+			margin-left: calc(50% - 40%);
+		}
+	}
+
+	/* CONTACTANOS */
+	.contacto {
+
+		.contacto-desc {
+			width: 100%;
+
+			h2 {
+				font-size: 45px;
+			}
+		}
+
+		.contacto-form {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 545px){
+	/* CERVEZAS */
+	.cervezas {
+		.cervezas-desc {
+			width: 100%;
+		}
+
+		.cervezas-slider {
+			width: 100%;
+			padding: 30px 0;
+
+			.slick-prev,
+			.slick-next {
+				border: none;
+				vertical-align: top;
+				margin: 150px 0 0 0;
+				color: transparent;
+				background: transparent;
+				font-family: 'Calibri';
+				font-weight: normal;
+				width: 80px;
+			}
+
+			.slick-list {
+				width: 50%;
+				margin-left: 10px;
+			}
+
+			article.slick-slide {
+				img {
+					display: block;
+					width: 81px;
+					margin: auto;
+				}
+
+				.texto {
+					margin-top: 20px;
+					margin-left: 10px;
+					display: block;
+					width: 100%;
+					
+					h3 {
+						text-align: center;
+					}
+
+					 p {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	/* CARTEL */
+
+	.fondo {
+		.modal {
+			.pregunta {
+				font-size: 1.5em;
+			}
+
+			.btnSi,
+			.btnNo {
+				padding: 10px 20px;
+			}
+		}
+	}
+}

@@ -4,39 +4,83 @@
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'intro_condlight';
-  src: url("../fonts/intro_cond_light_free-webfont.woff2") format("woff2"), url("../fonts/intro_cond_light_free-webfont.woff") format("woff");
+  font-family: 'gotham';
+  src: url("../fonts/gotham-book-webfont.woff2") format("woff2"), url("../fonts/gotham-book-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 * {
   box-sizing: border-box; }
 
+.fondo {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 200; }
+  .fondo .modal {
+    background: #000000;
+    position: absolute;
+    box-shadow: 2px 2px 5px black;
+    padding: 30px;
+    left: calc(50% - 220px);
+    top: calc(50% - 90px);
+    text-align: center; }
+    .fondo .modal .pregunta {
+      font-family: "gotham";
+      text-align: center;
+      font-size: 2em;
+      color: #FFF2B1;
+      font-weight: bold; }
+    .fondo .modal .btnSi,
+    .fondo .modal .btnNo {
+      border: none;
+      background: #FFF2B1;
+      color: #000000;
+      padding: 15px 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 40px 15px 0 15px;
+      border: 1px solid transparent;
+      transition: 1s all; }
+      .fondo .modal .btnSi:hover,
+      .fondo .modal .btnNo:hover {
+        background: #000000;
+        color: #FFF2B1;
+        border: 1px solid #FFF2B1;
+        cursor: pointer; }
+
 header {
   width: 100%;
   height: 100vh;
-  background: url(../images/bg_header.jpg) no-repeat;
+  background: url(../images/inicio2.jpg) no-repeat;
   background-size: cover;
-  border-bottom: 10px solid #D59A00;
+  border-bottom: 10px solid #FFF2B1;
   position: relative; }
   header nav {
     background: #000000;
-    padding: 20px 0; }
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    /*
+    	PONERLE HOVER AL LOGO
+    */ }
     header nav ul.menu {
-      max-width: 880px;
+      max-width: 960px;
       margin: auto;
       position: relative;
       padding-top: 20px; }
       header nav ul.menu li {
         display: inline-block;
-        text-align: center;
-        word-spacing: 5px;
         margin-right: 60px; }
+        header nav ul.menu li:hover {
+          cursor: pointer; }
         header nav ul.menu li a {
           text-decoration: none;
           color: white;
           text-transform: uppercase;
-          font-size: 0.9em;
-          font-family: 'Calibri';
+          font-size: 0.8em;
+          font-family: "gotham";
           letter-spacing: 1px;
           color: #CDCDCD;
           font-weight: bold; }
@@ -62,45 +106,87 @@ header {
             background: #454545;
             margin-right: 10px;
             margin-left: 3px; }
+      header nav ul.menu li:first-child {
+        margin-left: 180px; }
       header nav ul.menu li:nth-child(3) {
-        margin-right: 190px; }
-      header nav ul.menu .logo {
-        position: absolute;
+        margin-left: 150px; }
+    header nav .logo {
+      position: absolute;
+      width: 103px;
+      height: 100px;
+      left: calc(50% - 61px);
+      top: 5px;
+      background: #000000;
+      border-radius: 50%;
+      padding: 10px;
+      box-sizing: content-box; }
+      header nav .logo a {
+        display: inline-block;
         width: 103px;
         height: 100px;
-        left: calc(50% - 61px);
-        top: -15px;
-        background: #000000;
-        border-radius: 50%;
-        padding: 10px;
-        box-sizing: content-box; }
-        header nav ul.menu .logo a {
-          display: inline-block;
-          width: 103px;
-          height: 100px;
-          background: url(../images/logo.png); }
-        header nav ul.menu .logo a:hover {
-          background-position: 0 -130px; }
+        background: url(../images/logo.png);
+        background-position: 0 -130px; }
+      header nav .logo a:hover {
+        background-position: 0 0px; }
   header article {
     text-align: center;
     position: absolute;
-    height: 100px;
-    width: 392px;
-    top: calc(50% - 50px);
-    left: calc(50% - 196px); }
+    height: 250px;
+    width: 490px;
+    top: calc(50% - 125px);
+    left: calc(50% - 245px); }
     header article h2 {
-      font-size: 60px;
-      font-family: 'Pacifico';
-      color: #D59A00;
-      margin-top: 10%; }
+      font-size: 120px;
+      font-family: "intro_condblack";
+      color: #FFF2B1;
+      margin-top: 10%;
+      text-shadow: 3px 3px 5px #000; }
     header article p {
-      font-size: 30px;
-      font-family: 'Calibri';
+      font-size: 40px;
+      font-family: "gotham";
       color: #E7E7E7;
       text-transform: uppercase;
       letter-spacing: 5px;
       word-spacing: 10px;
       margin-top: 10px; }
+
+.ac-container {
+  background: #0F0F0F;
+  border-radius: 0;
+  width: 50%;
+  margin: 30px auto; }
+  .ac-container h2 {
+    color: white;
+    font-family: 'intro_condblack';
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ccc; }
+  .ac-container p {
+    font-size: 16px;
+    font-family: 'gotham'; }
+  .ac-container .fields .month {
+    border-radius: 0;
+    padding: 10px;
+    height: auto;
+    outline: none; }
+  .ac-container .fields input.day, .ac-container .fields input.year {
+    border-radius: 0;
+    padding: 18px;
+    outline: none; }
+  .ac-container .fields input.day {
+    width: 60px; }
+  .ac-container .fields button {
+    border-radius: 4px;
+    padding: 9px 10px;
+    font-size: 12px;
+    width: auto;
+    border-radius: 0;
+    background: #FFF2B1;
+    color: #0F0F0F;
+    text-shadow: none;
+    font-family: 'gotham';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none; }
 
 .nosotros {
   background: #0F0F0F; }
@@ -110,7 +196,7 @@ header {
     color: #FFFFFF;
     display: inline-block; }
     .nosotros .nosotros-desc h2 {
-      font-family: 'intro_condblack';
+      font-family: "intro_condblack";
       font-weight: bold;
       text-transform: uppercase;
       font-size: 59px;
@@ -119,7 +205,7 @@ header {
     .nosotros .nosotros-desc h2::after {
       content: "Nosotros";
       font-family: 'Pacifico';
-      color: #FEC315;
+      color: #FFF2B1;
       text-transform: capitalize;
       font-size: 42px;
       font-weight: normal;
@@ -128,17 +214,18 @@ header {
       left: 50px;
       top: 41px; }
     .nosotros .nosotros-desc p {
-      font-family: 'Calibri';
+      font-family: "gotham";
       font-size: 19px;
       line-height: 30px;
       margin-bottom: 40px; }
     .nosotros .nosotros-desc a {
       text-decoration: none;
       display: inline-block;
-      background: #D59A00;
-      color: #FFFFFF;
+      background: #FFF2B1;
+      letter-spacing: 1px;
+      color: #0F0F0F;
       text-transform: uppercase;
-      font-family: 'Calibri';
+      font-family: "gotham";
       font-weight: bold;
       font-size: 17px;
       padding: 20px 40px; }
@@ -146,36 +233,39 @@ header {
     width: 63%;
     display: inline-block;
     vertical-align: top;
-    background: url(../images/bg_nosotros.jpg) no-repeat center center;
+    background: url(../images/nosotros.jpg) no-repeat center center;
     background-size: cover; }
-    .nosotros .nosotros-destacado ul li {
-      display: inline-block;
-      width: 50%;
-      padding: 70px 50px;
-      text-align: center; }
-      .nosotros .nosotros-destacado ul li .ion-beer {
-        color: #FFFFFF;
-        font-size: 30px; }
-      .nosotros .nosotros-destacado ul li h3 {
-        color: #c59911;
-        font-family: 'Calibri';
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 15px;
-        letter-spacing: 1px;
-        margin-top: 20px; }
-      .nosotros .nosotros-destacado ul li p {
-        font-family: 'Calibri';
-        color: #FFFFFF;
-        font-size: 16px;
-        margin-top: 20px;
-        line-height: 20px; }
-    .nosotros .nosotros-destacado ul li.br {
-      border-right: 1px solid #1C1912;
-      border-bottom: 1px solid #1C1912; }
-    .nosotros .nosotros-destacado ul li.bl {
-      border-left: 1px solid #1C1912;
-      border-top: 1px solid #1C1912; }
+    .nosotros .nosotros-destacado ul {
+      display: flex;
+      flex-wrap: wrap; }
+      .nosotros .nosotros-destacado ul li {
+        display: inline-block;
+        width: 50%;
+        padding: 70px 50px;
+        text-align: center; }
+        .nosotros .nosotros-destacado ul li .fa {
+          color: #FFFFFF;
+          font-size: 30px; }
+        .nosotros .nosotros-destacado ul li h3 {
+          color: #FFF2B1;
+          font-family: "gotham";
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 15px;
+          letter-spacing: 1px;
+          margin-top: 20px; }
+        .nosotros .nosotros-destacado ul li p {
+          font-family: "gotham";
+          color: #FFFFFF;
+          font-size: 16px;
+          margin-top: 20px;
+          line-height: 20px; }
+      .nosotros .nosotros-destacado ul li.br {
+        border-right: 1px solid #1C1912;
+        border-bottom: 1px solid #1C1912; }
+      .nosotros .nosotros-destacado ul li.bl {
+        border-left: 1px solid #1C1912;
+        border-top: 1px solid #1C1912; }
 
 /* Slider */
 .slick-slider {
@@ -255,11 +345,12 @@ header {
   position: relative; }
   .cervezas .cervezas-desc {
     width: 37%;
-    padding: 70px 60px;
+    padding: 80px 60px;
     display: inline-block;
-    background: #F0F0F0; }
+    background: #d8d8d8;
+    vertical-align: top; }
     .cervezas .cervezas-desc h2 {
-      font-family: 'intro_condblack';
+      font-family: "intro_condblack";
       font-weight: bold;
       text-transform: uppercase;
       font-size: 59px;
@@ -268,7 +359,7 @@ header {
     .cervezas .cervezas-desc h2::after {
       content: 'Cervezas';
       font-family: 'Pacifico';
-      color: #FDC218;
+      color: #FFF2B1;
       font-size: 45px;
       font-weight: normal;
       letter-spacing: 2px;
@@ -277,13 +368,14 @@ header {
       left: 110px;
       top: 38px; }
     .cervezas .cervezas-desc p {
-      font-family: 'Calibri';
+      font-family: "gotham";
       font-size: 19px;
       line-height: 30px; }
   .cervezas .cervezas-slider {
     padding-left: 50px;
     width: 63%;
-    display: inline-block; }
+    display: inline-block;
+    padding-top: 30px; }
     .cervezas .cervezas-slider .slick-prev,
     .cervezas .cervezas-slider .slick-next {
       border: none;
@@ -291,7 +383,7 @@ header {
       margin: 150px 0 0 0;
       color: transparent;
       background: transparent;
-      font-family: 'Calibri';
+      font-family: "gotham";
       font-weight: normal; }
       .cervezas .cervezas-slider .slick-prev:focus,
       .cervezas .cervezas-slider .slick-next:focus {
@@ -312,6 +404,8 @@ header {
       width: 60%;
       margin: auto;
       display: inline-block; }
+    .cervezas .cervezas-slider article.slick-slide:focus {
+      outline: none; }
     .cervezas .cervezas-slider article.slick-slide img {
       display: inline-block; }
     .cervezas .cervezas-slider article.slick-slide .texto {
@@ -321,13 +415,19 @@ header {
       margin-top: 100px;
       margin-left: 50px; }
       .cervezas .cervezas-slider article.slick-slide .texto h3 {
-        font-family: 'intro_condblack';
+        font-family: "intro_condblack";
         font-size: 30px;
         margin-bottom: 20px; }
       .cervezas .cervezas-slider article.slick-slide .texto p {
-        font-family: 'Calibri';
+        font-family: "gotham";
         font-size: 18px;
         line-height: 25px; }
+      .cervezas .cervezas-slider article.slick-slide .texto ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-family: "gotham";
+        font-size: 18px; }
     .cervezas .cervezas-slider .slick-dots {
       text-align: center; }
       .cervezas .cervezas-slider .slick-dots li {
@@ -347,6 +447,288 @@ header {
           .cervezas .cervezas-slider .slick-dots li button:focus {
             outline: none; }
       .cervezas .cervezas-slider .slick-dots .slick-active button:before {
-        background: #FDC218; }
+        background: #FFF2B1; }
+
+.contacto {
+  background: #111111; }
+  .contacto .contacto-desc {
+    width: 37%;
+    padding: 70px 60px;
+    display: inline-block; }
+    .contacto .contacto-desc h2 {
+      font-family: "intro_condblack";
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 59px;
+      position: relative;
+      color: #FFFFFF; }
+    .contacto .contacto-desc p {
+      font-family: "gotham";
+      font-size: 21px;
+      color: #FFF2B1;
+      margin: 10px 0 20px 0; }
+    .contacto .contacto-desc ul {
+      font-family: "gotham"; }
+      .contacto .contacto-desc ul li {
+        color: #8e8e8e;
+        font-size: 19px;
+        margin-bottom: 10px; }
+        .contacto .contacto-desc ul li span {
+          margin-right: 5px; }
+        .contacto .contacto-desc ul li a {
+          text-decoration: none;
+          color: #8e8e8e;
+          vertical-align: bottom; }
+  .contacto .contacto-form {
+    width: 63%;
+    display: inline-block;
+    vertical-align: top;
+    background: url(../images/contacto1.jpg);
+    background-size: cover;
+    padding: 60px 60px 20px 60px; }
+    .contacto .contacto-form p {
+      font-family: "gotham";
+      font-size: 21px;
+      color: #FFF2B1;
+      margin: 10px 0 20px 0;
+      width: 80%;
+      margin: 80px auto 0 auto; }
+    .contacto .contacto-form form {
+      width: 80%;
+      margin: auto; }
+      .contacto .contacto-form form input, .contacto .contacto-form form textarea {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+        background: transparent;
+        border: none;
+        font-family: "gotham";
+        font-size: 19px;
+        border-bottom: 1px solid #8e8e8e;
+        resize: none;
+        outline: none;
+        color: #8e8e8e; }
+      .contacto .contacto-form form input[type="submit"] {
+        background: #FFF2B1;
+        color: #111111;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        transition: 0.5s;
+        cursor: pointer;
+        margin-top: 30px; }
+      .contacto .contacto-form form ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #8e8e8e; }
+      .contacto .contacto-form form ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #8e8e8e; }
+      .contacto .contacto-form form :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #8e8e8e; }
+      .contacto .contacto-form form :-moz-placeholder {
+        /* Firefox 18- */
+        color: #8e8e8e; }
+
+footer {
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  background: #000000; }
+  footer p {
+    color: #4f4f4f;
+    font-size: 15px;
+    font-family: "gotham"; }
+  footer ul li {
+    display: inline-block; }
+    footer ul li a {
+      color: #4f4f4f;
+      font-size: 24px;
+      margin-left: 15px; }
+      footer ul li a:hover {
+        color: #FFF2B1; }
+
+@media screen and (max-width: 1024px) {
+  /* HEADER */
+  header nav {
+    height: 130px; }
+    header nav ul.menu {
+      display: none; }
+  header article {
+    width: 280px;
+    height: 120px;
+    top: calc(50% - 60px);
+    left: calc(50% - 140px); }
+    header article h2 {
+      font-size: 44px; }
+    header article p {
+      font-size: 35px; }
+
+  /* NOSOTROS */
+  .nosotros .nosotros-desc {
+    width: 100%; }
+    .nosotros .nosotros-desc p {
+      font-size: 22px;
+      line-height: 35px;
+      margin-bottom: 0; }
+    .nosotros .nosotros-desc a {
+      display: none; }
+  .nosotros .nosotros-destacado {
+    display: none; }
+
+  /* CERVEZAS */
+  .cervezas .cervezas-desc {
+    width: 100%; }
+    .cervezas .cervezas-desc p {
+      font-size: 22px;
+      line-height: 35px; }
+  .cervezas .cervezas-slider {
+    width: 100%;
+    padding: 30px 0; }
+    .cervezas .cervezas-slider .slick-prev,
+    .cervezas .cervezas-slider .slick-next {
+      border: none;
+      vertical-align: top;
+      margin: 150px 0 0 0;
+      color: transparent;
+      background: transparent;
+      font-family: 'Calibri';
+      font-weight: normal;
+      width: 80px; }
+    .cervezas .cervezas-slider .slick-list {
+      width: 65%;
+      margin-left: 10px; }
+    .cervezas .cervezas-slider article.slick-slide .texto {
+      margin-left: 10px; }
+
+  /* CONTACTANOS */
+  .contacto .contacto-desc {
+    width: 100%; }
+    .contacto .contacto-desc h2 {
+      font-size: 45px; }
+  .contacto .contacto-form {
+    width: 100%; } }
+@media screen and (max-width: 545px) {
+  /* CERVEZAS */
+  .cervezas .cervezas-desc {
+    width: 100%; }
+  .cervezas .cervezas-slider {
+    width: 100%;
+    padding: 30px 0; }
+    .cervezas .cervezas-slider .slick-prev,
+    .cervezas .cervezas-slider .slick-next {
+      border: none;
+      vertical-align: top;
+      margin: 150px 0 0 0;
+      color: transparent;
+      background: transparent;
+      font-family: 'Calibri';
+      font-weight: normal;
+      width: 80px; }
+    .cervezas .cervezas-slider .slick-list {
+      width: 50%;
+      margin-left: 10px; }
+    .cervezas .cervezas-slider article.slick-slide img {
+      display: block;
+      width: 81px;
+      margin: auto; }
+    .cervezas .cervezas-slider article.slick-slide .texto {
+      margin-top: 20px;
+      margin-left: 10px;
+      display: block;
+      width: 100%; }
+      .cervezas .cervezas-slider article.slick-slide .texto h3 {
+        text-align: center; }
+      .cervezas .cervezas-slider article.slick-slide .texto p {
+        display: none; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* HEADER */
+  header article {
+    width: 355px;
+    left: calc(50% - 177px); }
+    header article h2 {
+      font-size: 55px; }
+    header article p {
+      font-size: 45px; }
+
+  /* CERVEZAS */
+  .cervezas .cervezas-desc {
+    width: 100%; }
+    .cervezas .cervezas-desc p {
+      font-size: 22px;
+      line-height: 35px; }
+  .cervezas .cervezas-slider {
+    width: 100%;
+    padding: 30px 0; }
+    .cervezas .cervezas-slider .slick-prev,
+    .cervezas .cervezas-slider .slick-next {
+      border: none;
+      vertical-align: top;
+      margin: 150px 0 0 0;
+      color: transparent;
+      background: transparent;
+      font-family: 'Calibri';
+      font-weight: normal;
+      width: 80px; }
+    .cervezas .cervezas-slider .slick-prev {
+      margin-right: 20px; }
+    .cervezas .cervezas-slider .slick-list {
+      width: 65%;
+      margin-left: 10px; }
+    .cervezas .cervezas-slider article.slick-slide .texto {
+      margin-left: 10px; }
+  .cervezas .slick-initialized.slick-slider.slick-dotted {
+    width: 80%;
+    margin-left: calc(50% - 40%); }
+
+  /* CONTACTANOS */
+  .contacto .contacto-desc {
+    width: 100%; }
+    .contacto .contacto-desc h2 {
+      font-size: 45px; }
+  .contacto .contacto-form {
+    width: 100%; } }
+@media screen and (max-width: 545px) {
+  /* CERVEZAS */
+  .cervezas .cervezas-desc {
+    width: 100%; }
+  .cervezas .cervezas-slider {
+    width: 100%;
+    padding: 30px 0; }
+    .cervezas .cervezas-slider .slick-prev,
+    .cervezas .cervezas-slider .slick-next {
+      border: none;
+      vertical-align: top;
+      margin: 150px 0 0 0;
+      color: transparent;
+      background: transparent;
+      font-family: 'Calibri';
+      font-weight: normal;
+      width: 80px; }
+    .cervezas .cervezas-slider .slick-list {
+      width: 50%;
+      margin-left: 10px; }
+    .cervezas .cervezas-slider article.slick-slide img {
+      display: block;
+      width: 81px;
+      margin: auto; }
+    .cervezas .cervezas-slider article.slick-slide .texto {
+      margin-top: 20px;
+      margin-left: 10px;
+      display: block;
+      width: 100%; }
+      .cervezas .cervezas-slider article.slick-slide .texto h3 {
+        text-align: center; }
+      .cervezas .cervezas-slider article.slick-slide .texto p {
+        display: none; }
+
+  /* CARTEL */
+  .fondo .modal .pregunta {
+    font-size: 1.5em; }
+  .fondo .modal .btnSi,
+  .fondo .modal .btnNo {
+    padding: 10px 20px; } }
 
 /*# sourceMappingURL=style.css.map */

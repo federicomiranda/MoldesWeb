@@ -1,0 +1,160 @@
+@media screen and (max-width: 1024px){
+	/* HEADER */
+	header {
+		nav {
+			height: 130px;
+
+			ul.menu {
+				display: none;
+			}
+		}
+
+
+		article {
+			width: 280px;
+			height: 120px;
+			top: calc(50% - 60px);
+			left: calc(50% - 140px);
+
+			h2 {
+				font-size: 44px;
+			}
+
+			p {
+				font-size: 35px;
+			}
+		}
+	}
+
+	/* NOSOTROS */
+	.nosotros {
+		
+		.nosotros-desc {
+			width: 100%;
+
+			p {
+				font-size: 22px;
+				line-height: 35px;
+				margin-bottom: 0;
+			}
+
+			a {
+				display: none;
+			}
+		}
+
+		.nosotros-destacado {
+			display: none;
+		}
+	}
+
+	/* CERVEZAS */
+	.cervezas {
+		.cervezas-desc {
+			width: 100%;
+
+			p {
+				font-size: 22px;
+				line-height: 35px;
+			}
+		}
+
+		.cervezas-slider {
+			width: 100%;
+			padding: 30px 0;
+
+			.slick-prev,
+			.slick-next {
+				border: none;
+				vertical-align: top;
+				margin: 150px 0 0 0;
+				color: transparent;
+				background: transparent;
+				font-family: 'Calibri';
+				font-weight: normal;
+				width: 80px;
+			}
+
+			.slick-list {
+				width: 65%;
+				margin-left: 10px;
+			}
+
+			article.slick-slide {
+				.texto {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	/* CONTACTANOS */
+	.contacto {
+
+		.contacto-desc {
+			width: 100%;
+
+			h2 {
+				font-size: 45px;
+			}
+		}
+
+		.contacto-form {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 545px){
+	/* CERVEZAS */
+	.cervezas {
+		.cervezas-desc {
+			width: 100%;
+		}
+
+		.cervezas-slider {
+			width: 100%;
+			padding: 30px 0;
+
+			.slick-prev,
+			.slick-next {
+				border: none;
+				vertical-align: top;
+				margin: 150px 0 0 0;
+				color: transparent;
+				background: transparent;
+				font-family: 'Calibri';
+				font-weight: normal;
+				width: 80px;
+			}
+
+			.slick-list {
+				width: 50%;
+				margin-left: 10px;
+			}
+
+			article.slick-slide {
+				img {
+					display: block;
+					width: 81px;
+					margin: auto;
+				}
+
+				.texto {
+					margin-top: 20px;
+					margin-left: 10px;
+					display: block;
+					width: 100%;
+					
+					h3 {
+						text-align: center;
+					}
+
+					 p {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

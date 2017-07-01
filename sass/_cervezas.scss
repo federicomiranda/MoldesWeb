@@ -4,12 +4,13 @@
 
 	.cervezas-desc {
 		width: 37%;
-		padding: 70px 60px;
+		padding: 80px 60px;
 		display: inline-block;
-		background: #F0F0F0;
+		background: #d8d8d8;
+		vertical-align: top;
 
 		h2 {
-			font-family: 'intro_condblack';
+			font-family: $titulos;
 			font-weight: bold;
 			text-transform: uppercase;
 			font-size: 59px;
@@ -20,7 +21,7 @@
 		h2::after {
 			content: 'Cervezas';
 			font-family: 'Pacifico';
-			color: #FDC218;
+			color: $color-principal;
 			font-size: 45px;
 			font-weight: normal;
 			letter-spacing: 2px;
@@ -31,7 +32,7 @@
 		}
 
 		p {
-			font-family: 'Calibri';
+			font-family: $texto;
 			font-size: 19px;
 			line-height: 30px;
 		}
@@ -41,6 +42,7 @@
 		padding-left: 50px;
 		width: 63%;
 		display: inline-block;
+		padding-top: 30px;
 
 		.slick-prev,
 		.slick-next {
@@ -49,7 +51,7 @@
 			margin: 150px 0 0 0;
 			color: transparent;
 			background: transparent;
-			font-family: 'Calibri';
+			font-family: $texto;
 			font-weight: normal;
 
 			&:focus {
@@ -80,6 +82,10 @@
 		}
 
 		article.slick-slide {
+			&:focus {
+				outline: none;
+			}
+
 			img {
 				display: inline-block;
 			}
@@ -92,15 +98,23 @@
 				margin-left: 50px;
 
 				h3 {
-					font-family: 'intro_condblack';
+					font-family: $titulos;
 					font-size: 30px;
 					margin-bottom: 20px;
 				}
 
 				p {
-					font-family: 'Calibri';
+					font-family: $texto;
 					font-size: 18px;
 					line-height: 25px;
+				}
+
+				ul {
+					display: flex;
+					justify-content: space-between;
+					margin-top: 10px;
+					font-family: $texto;
+					font-size: 18px;
 				}
 			}
 		}
@@ -135,7 +149,7 @@
 			.slick-active {
 
 				button:before {
-					background: #FDC218;
+					background: $color-principal;
 				}
 			}
 		}

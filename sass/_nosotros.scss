@@ -8,7 +8,7 @@
 		display: inline-block;
 
 		h2 {
-			font-family: 'intro_condblack';
+			font-family: $titulos;
 			font-weight: bold;
 			text-transform: uppercase;
 			font-size: 59px;
@@ -19,7 +19,7 @@
 		h2::after {
 			content: "Nosotros";
 			font-family: 'Pacifico';
-			color: #FEC315;
+			color: $color-principal;
 			text-transform: capitalize;
 			font-size: 42px;
 			font-weight: normal;
@@ -30,7 +30,7 @@
 		}
 
 		p {
-			font-family: 'Calibri';
+			font-family: $texto;
 			font-size: 19px;
 			line-height: 30px;
 			margin-bottom: 40px;
@@ -39,10 +39,11 @@
 		a {
 			text-decoration: none;
 			display: inline-block;
-			background: #D59A00;
-			color: #FFFFFF;
+			background: $color-principal;
+			letter-spacing: 1px;
+			color: #0F0F0F;
 			text-transform: uppercase;
-			font-family: 'Calibri';
+			font-family: $texto;
 			font-weight: bold;
 			font-size: 17px;
 			padding: 20px 40px;
@@ -53,25 +54,26 @@
 		width: 63%;
 		display: inline-block;
 		vertical-align: top;
-		background: url(../images/bg_nosotros.jpg) no-repeat center center;
+		background: url(../images/nosotros.jpg) no-repeat center center;
 		background-size: cover;
 
 		ul {
-
+			display: flex;
+			flex-wrap: wrap;
 			li {
 				display: inline-block;
 				width: 50%;
 				padding: 70px 50px;
 				text-align: center;
 
-				.ion-beer {
+				.fa {
 					color: #FFFFFF;
 					font-size: 30px;
 				}
 
 				h3 {
-					color: #c59911;
-					font-family: 'Calibri';
+					color: $color-principal;
+					font-family: $texto;
 					font-weight: bold;
 					text-transform: uppercase;
 					font-size: 15px;
@@ -80,7 +82,7 @@
 				}
 
 				p {
-					font-family: 'Calibri';
+					font-family: $texto;
 					color: #FFFFFF;
 					font-size: 16px;
 					margin-top: 20px;

@@ -1,0 +1,29 @@
+footer {
+	padding: 30px 60px;
+	display: flex;
+	justify-content: space-between;
+	background: #000000;
+
+	p {
+		color: #4f4f4f;
+		font-size: 15px;
+		font-family: $texto;
+	}
+
+	ul {
+
+		li {
+			display: inline-block;
+
+			a {
+				color: #4f4f4f;
+				font-size: 24px;
+				margin-left: 15px;
+
+				&:hover {
+					color: $color-principal;
+				}
+			}
+		}
+	}
+}

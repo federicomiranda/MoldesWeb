@@ -1,0 +1,53 @@
+.ac-container {
+	background: #0F0F0F;
+	border-radius: 0;
+	width: 50%;
+	margin: 30px auto;
+
+	h2 {
+		color: white;
+		font-family: 'intro_condblack';
+		letter-spacing: 2px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	p {
+		font-size: 16px;
+		font-family: 'gotham';
+	}
+
+	.fields {
+
+		.month {
+			border-radius: 0;
+			padding: 10px;
+			height: auto;
+			outline: none;
+		}
+
+		input.day, input.year {
+			border-radius: 0;
+			padding: 18px;
+			outline: none;
+		}
+
+		input.day {
+			width: 60px;
+		}
+
+		button {
+		    border-radius: 4px;
+		    padding: 9px 10px;
+		    font-size: 12px;
+		    width: auto;
+		    border-radius: 0;
+		    background: #FFF2B1;
+		    color: #0F0F0F;
+		    text-shadow: none;
+		    font-family: 'gotham';
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    outline: none;
+		}
+	}
+}
